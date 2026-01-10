@@ -1,0 +1,37 @@
+{
+    "name": "maaf/queue",
+    "description": "MAAF Queue Package - Queue driver abstraction with module-level worker configuration and Horizon-like dashboard",
+    "type": "library",
+    "keywords": ["maaf", "queue", "job", "worker", "dashboard", "horizon"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bloch Tamás",
+            "email": "info@bloch.hu"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "maaf/core": "^2.0"
+    },
+    "suggest": {
+        "predis/predis": "Required for Redis queue driver",
+        "ext-redis": "Required for Redis queue driver"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5",
+        "phpstan/phpstan": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MAAF\\Queue\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MAAF\\Queue\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
